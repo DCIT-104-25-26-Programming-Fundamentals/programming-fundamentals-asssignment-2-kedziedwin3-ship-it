@@ -72,4 +72,35 @@
 #include <iomanip>
 #include <cmath>
 using namespace std;
-
+// Function to perform addition
+double add(double a, double b) {
+    return a + b;
+}
+// Function to perform subtraction
+double subtract(double a, double b) {
+    return a - b;
+}
+// Function to perform multiplication
+double multiply(double a, double b) {
+    return a * b;
+}
+// Function to perform division
+double divide(double a, double b) {
+    if (b == 0) {
+        cerr << "Error: Cannot divide by zero." << endl;
+        return 0;
+    }
+    return a / b;
+}
+// Function to perform modulus
+double modulus(double a, double b) {
+    if (b == 0) {
+        cerr << "Error: Cannot calculate modulus with zero divisor." << endl;
+        return 0;
+    }
+    return fmod(a, b);
+}
+// Function to perform exponentiation
+double power(double a, double b) {
+    return pow(a, b);
+}
