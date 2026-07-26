@@ -56,4 +56,11 @@
 
 #include <iostream>
 using namespace std;
+// Function to print the multiplication table for a single number
+void printSingleTable(int number) {
+    cout << "Multiplication Table for " << number << ":" << endl;
+    for (int i = 1; i <= 12; ++i) {
+        cout << number << " x " << i << " = " << (number * i) << endl;
+    }
+}
 
