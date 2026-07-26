@@ -34,6 +34,49 @@
 // YOUR CODE BELOW — remove the // symbols from the scaffold and fill it in
 // =============================================================================
 
-#include <iostream>
-using namespace std;
+extern "C" int printf(const char*, ...);
+extern "C" int scanf(const char*, ...);
+
+// Function to check if a number is prime
+bool isPrime(int num) {
+    // Numbers less than 2 are NOT prime
+    if (num < 2) {
+        return false;
+    }
+    
+    // 2 is prime
+    if (num == 2) {
+        return true;
+    }
+    
+    // Even numbers (except 2) are not prime
+    if (num % 2 == 0) {
+        return false;
+    }
+    
+    // Check odd divisors up to sqrt(num)
+    for (int i = 3; i <= sqrt(num); i += 2) {
+        if (num % i == 0) {
+            return false;
+        }
+    }
+    
+    return true;
+}
+
+// Main function
+int main() {
+    int number;
+    
+    cout << "Enter a number: ";
+    cin >> number;
+    
+    if (isPrime(number)) {
+        cout << number << " is a prime number." << endl;
+    } else {
+        cout << number << " is NOT a prime number." << endl;
+    }
+    
+    return 0;
+}
 
