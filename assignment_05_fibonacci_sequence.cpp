@@ -50,4 +50,21 @@
 
 #include <iostream>
 using namespace std;
+// Function to print the first N terms of the Fibonacci sequence
+void printFibonacci(int N) {
+    if (N <= 0) {
+        cout << "Error: N must be a positive integer." << endl;
+        return;
+    }
+    
+    int a = 0, b = 1;
+    cout << "Fibonacci sequence: ";
+    for (int i = 0; i < N; ++i) {
+        cout << a << " ";
+        int next = a + b;
+        a = b;
+        b = next;
+    }
+    cout << endl;
+}
 
