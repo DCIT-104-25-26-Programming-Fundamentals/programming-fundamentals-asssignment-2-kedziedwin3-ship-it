@@ -40,5 +40,18 @@
 // =============================================================================
 
 #include <iostream>
+#include <limits>
 using namespace std;
+// Function to find  the maximum value in an array
+int findMax(int arr[], int size) {
+    int maxVal = arr[0];
+    for (int i = 1; i < size; ++i) {
+        if (arr[i] > maxVal) {
+            maxVal = arr[i];
+        }
+    }
+    return maxVal;
+}
+
+
 
