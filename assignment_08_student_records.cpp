@@ -82,4 +82,10 @@
 #include <string>
 #include <iomanip>
 using namespace std;
+// Define the Student struct
+struct Student {
+    string name;               // Student's full name
+    int id;                    // Unique student ID number
+    vector<double> scores;     // List of scores from multiple assessments
+};
 
