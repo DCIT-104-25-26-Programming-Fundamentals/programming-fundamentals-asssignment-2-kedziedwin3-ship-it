@@ -61,7 +61,15 @@
 // =============================================================================
 
 #include <iostream>
-#include <iomanip>
-#include <string>
 using namespace std;
+const int MAX_SIZE = 10;
+// Function to transpose a matrix
+void transposeMatrix(int matrix[MAX_SIZE][MAX_SIZE], int rows, int cols, int transposed[MAX_SIZE][MAX_SIZE]) {
+    for (int i = 0; i < rows; ++i) {
+        for (int j = 0; j < cols; ++j) {
+            transposed[j][i] = matrix[i][j];
+        }
+    }
+}
+
 
