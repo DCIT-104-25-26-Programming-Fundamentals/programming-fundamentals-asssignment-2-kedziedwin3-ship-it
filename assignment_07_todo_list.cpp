@@ -79,4 +79,20 @@
 #include <vector>
 #include <string>
 using namespace std;
+// Function to display the menu and get the user's choice
+int displayMenu() {
+    cout << "============================" << endl;
+    cout << "     TO-DO LIST MENU" << endl;
+    cout << "============================" << endl;
+    cout << "1. Add task" << endl;
+    cout << "2. View tasks" << endl;
+    cout << "3. Delete task" << endl;
+    cout << "4. Quit" << endl;
+    cout << "Enter your choice (1-4): ";
+    
+    int choice;
+    cin >> choice;
+    cin.ignore(); // Clear the newline character from the input buffer
+    return choice;
+}
 
